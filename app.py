@@ -5,7 +5,7 @@ from io import BytesIO
 import boto3
 from doc_summarizer import Chunk_and_Summarize, handle_user_input, search_documents
 
-os.environ["AWS_REGION"] = "us-west-2"
+os.environ["AWS_DEFAULT_REGION"] = "us-west-2"
 os.environ["S3_BUCKET_NAME"] = "bedrockai"
 
 # Check if 'messages' exists in session_state

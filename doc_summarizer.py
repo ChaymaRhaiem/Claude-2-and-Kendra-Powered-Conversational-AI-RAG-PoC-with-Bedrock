@@ -10,7 +10,7 @@ import os
 from datetime import datetime 
 import botocore.config
 
-os.environ["AWS_REGION"] = "us-west-2"
+os.environ["AWS_DEFAULT_REGION"] = "us-west-2"
 os.environ["S3_BUCKET_NAME"] = "bedrockai"
 
 load_dotenv()
