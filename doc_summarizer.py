@@ -12,7 +12,6 @@ import botocore.config
 
 os.environ["AWS_DEFAULT_REGION"] = "us-west-2"
 os.environ["S3_BUCKET_NAME"] = "bedrockai"
-os.environ["AWS_PROFILE"]="default"
 
 load_dotenv()
 nltk.download('punkt')
