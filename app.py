@@ -7,7 +7,7 @@ from doc_summarizer import Chunk_and_Summarize, handle_user_input, search_docume
 
 os.environ["AWS_DEFAULT_REGION"] = "us-west-2"
 os.environ["S3_BUCKET_NAME"] = "bedrockai"
-
+os.environ["AWS_PROFILE"]="default"
 # Check if 'messages' exists in session_state
 if 'messages' not in st.session_state:
     st.session_state['messages'] = []
