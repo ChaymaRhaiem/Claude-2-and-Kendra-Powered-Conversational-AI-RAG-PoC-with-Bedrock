@@ -6,7 +6,7 @@ import boto3
 from doc_summarizer import Chunk_and_Summarize, handle_user_input, search_documents
 
 os.environ["AWS_DEFAULT_REGION"] = "us-west-2"
-os.environ["S3_BUCKET_NAME"] = "bedrockai"
+os.environ["S3_BUCKET_NAME"] = "" # add your bucket name
 
 # Check if 'messages' exists in session_state
 if 'messages' not in st.session_state:
@@ -14,13 +14,13 @@ if 'messages' not in st.session_state:
 
 # Create a sidebar for navigation
 st.sidebar.title("Navigation")
-st.sidebar.markdown("---")  # Add a horizontal line
+st.sidebar.markdown("---")  
 st.sidebar.header("Pages")
-page = st.sidebar.radio("", ["Home", "Chat"])  # Remove the label
+page = st.sidebar.radio("", ["Home", "Chat"]) 
 
-st.sidebar.markdown("\n\n\n")  # Add some space
+st.sidebar.markdown("\n\n\n")  
 
-st.sidebar.markdown("---")  # Add a horizontal line
+st.sidebar.markdown("---")  
 
 if page == "Home":
     st.title(f"""Document Summarization with Amazon Bedrock""")

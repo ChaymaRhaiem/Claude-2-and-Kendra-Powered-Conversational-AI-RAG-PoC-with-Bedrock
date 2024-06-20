@@ -10,8 +10,6 @@ import os
 from datetime import datetime 
 import botocore.config
 
-os.environ["AWS_DEFAULT_REGION"] = "us-west-2"
-os.environ["S3_BUCKET_NAME"] = "bedrockai"
 
 load_dotenv()
 nltk.download('punkt')
@@ -79,7 +77,7 @@ def Chunk_and_Summarize(uploaded_file) -> str:
     return summarizer(final_summary_prompt)
 
 def search_documents(query):
-    index_id = '423e4538-ec87-4d2a-8795-04279a355286'  # Replace with your Kendra Index ID
+    index_id = '..'  # Replace with your Kendra Index ID
     response = kendra.query(
         IndexId=index_id,
         QueryText=query
